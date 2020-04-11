@@ -1,5 +1,5 @@
 {
-    "name": "binos/binos-logger",
+    "name": "binos/logger",
     "description": "PHP Logger for Binos",
     "type": "library",
     "license": "MIT",
