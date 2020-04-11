@@ -1,0 +1,24 @@
+{
+    "name": "binos/binos-logger",
+    "description": "PHP Logger for Binos",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mustaf Shllaku",
+            "email": "shllaku360@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.2.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.4|^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Binos\\Logger\\": "src/"
+        }
+    }
+}
