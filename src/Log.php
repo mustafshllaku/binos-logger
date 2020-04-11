@@ -61,6 +61,26 @@ class Log
 		return $this->log(self::ALERT, $message);
 	}
 
+	public function error($message)
+	{
+		return $this->log(self::ERROR, $message);
+	}
+
+	public function info($message)
+	{
+		return $this->log(self::INFO, $message);
+	}
+
+	public function notice($message)
+	{
+		return $this->log(self::NOTICE, $message);
+	}
+
+	public function debug($message)
+	{
+		return $this->log(self::DEBUG, $message);
+	}
+
 	public function log($level, $message)
 	{
 		foreach($this->writers as $writer)
