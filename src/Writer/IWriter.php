@@ -9,7 +9,8 @@ interface IWriter
 	 *
 	 * @param mixed $level
 	 * @param string $message
+	 * @param mixed $datetime
 	 * @return IWriter
 	 */
-	public function writeLog($level, $message);
+	public function writeLog($level, $message, $datetime);
 }

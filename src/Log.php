@@ -15,6 +15,14 @@ class Log
 	const NOTICE 	= 3;
 	const DEBUG 	= 4;
 
+	protected $levels = [
+		0	=>	'ALERT',
+		1	=>	'ERROR',
+		2	=>	'INFO',
+		3	=>	'NOTICE',
+		4	=>	'DEBUG'
+	];
+
 	/**
 	 * Log writers
 	 *
@@ -48,11 +56,16 @@ class Log
 		return $this->writers;
 	}
 
+	public function alert($message)
+	{
+		return $this->log(self::ALERT, $message);
+	}
+
 	public function log($level, $message)
 	{
 		foreach($this->writers as $writer)
 		{
-			$writer->writeLog($level, $message);
+			$writer->writeLog($this->levels[$level], $message, date($this->timestamp));
 		}
 
 		return $this;
