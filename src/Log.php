@@ -56,6 +56,16 @@ class Log
 		return $this->writers;
 	}
 
+	public function getTimestamp()
+	{
+		return $this->timestamp;
+	}
+
+	public function changeTimestamp(string $timestamp)
+	{
+		$this->timestamp = $timestamp;
+	}
+
 	public function alert($message)
 	{
 		return $this->log(self::ALERT, $message);
